@@ -2,13 +2,12 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Julia</title><style>
 * { box-sizing: border-box; }
 :root { color: #151515; background: white; font: 14px/1.25 Helvetica, Arial, sans-serif; letter-spacing: -.08px; }
-body, h1, h2, p { margin: 0; }
+body, h2, p { margin: 0; }
 button, select, input, output { font: inherit; color: inherit; }
 button, summary, select, input[type=range] { cursor: pointer; }
 button { background: none; border: 0; padding: 0; }
 button:focus-visible, input:focus-visible, summary:focus-visible, select:focus-visible { outline: 1px dashed currentColor; outline-offset: 3px; }
-h1, h2 { font-size: inherit; font-weight: normal; text-align: center; }
-h1 { padding-top: 8px; line-height: 20px; }
+h2 { font-size: inherit; font-weight: normal; text-align: center; }
 .studio { --gutter: clamp(16px, 3vw, 41px);
   width: min(939px, calc(100% - 32px), calc(200dvh - 584px + var(--gutter)));
   margin: 16px auto 12px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--gutter); }
@@ -64,7 +63,7 @@ select { background: white; }
   .below {min-height:36px;}
 }
 </style></head>
-<body><main id="julia-live-studio"><h1>julia.mglaa.com</h1><div class="studio">
+<body><main id="julia-live-studio" aria-label="Julia"><div class="studio">
 <section aria-label="Julia equation and map"><div class="view" id="view-map"><div class="view-header"><h2><i>z</i><sub>n+1</sub> = <i>z</i><sub>n</sub><sup>2</sup> + <i>c</i></h2><button class="expand" id="expand-map" aria-label="View map fullscreen">Fullscreen</button></div><button class="surface" id="pad" aria-label="Julia map. Point to inspect, or drag to draw."><canvas id="plane"></canvas></button></div>
 <details class="below"><summary title="Inspect the selected orbit"><span id="equation-c"></span></summary><div class="readout"><p id="z-from"></p><p id="c-add"></p><p id="z-to"></p><p id="escape"></p><p id="effect"></p></div></details>
 <div class="settings">
